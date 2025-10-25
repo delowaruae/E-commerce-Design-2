@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Staircase Chandelier — Product Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #f97316;
+      --gray: #6b7280;
+      --border: #e5e7eb;
+      --bg: #fff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+
+    body { background: #fafafa; color: #111827; }
+
+    header {
+      padding: 16px 24px;
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 30px auto;
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 40px;
+      padding: 0 20px;
+    }
+
+    /* === Left: Image Carousel === */
+    .gallery {
+      position: relative;
+      display: flex;
+      gap: 20px;
+    }
+    .thumbs {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .thumbs img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border: 2px solid transparent;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .thumbs img.active {
+      border-color: var(--accent);
+    }
+
+    .main-image {
+      position: relative;
+      flex: 1;
+    }
+    .main-image img {
+      width: 100%;
+      height: 550px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.9);
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .arrow.left { left: 10px; }
+    .arrow.right { right: 10px; }
+
+    /* === Right: Product Info === */
+    .details {
+      background: var(--bg);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 24px;
+    }
+
+    .details h1 {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .seller {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--gray);
+      margin-bottom: 20px;
+    }
+
+    .price-box {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 14px;
+      font-size: 15px;
+      border-bottom: 1px solid var(--border);
+    }
+    .price-row:last-child { border-bottom: 0; }
+    .price-row span:first-child { color: var(--gray); }
+    .price-row span:last-child { color: var(--accent); font-weight: 600; }
+
+    .variation {
+      margin-bottom: 16px;
+    }
+    .variation strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+    .variation .opt {
+      display: inline-block;
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #f9fafb;
+      font-size: 14px;
+      margin-right: 8px;
+    }
+
+    .shipping {
+      font-size: 14px;
+      color: var(--gray);
+      margin-top: 12px;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .buttons button {
+      flex: 1;
+      padding: 12px 0;
+      border-radius: 30px;
+      font-size: 15px;
+      cursor: pointer;
+      font-weight: 600;
+      border: 2px solid var(--accent);
+    }
+    .buttons .inquiry {
+      background: var(--accent);
+      color: #fff;
+    }
+    .buttons .chat {
+      background: #fff;
+      color: var(--accent);
+    }
+
+    @media(max-width: 860px){
+      main {
+        grid-template-columns: 1fr;
+      }
+      .main-image img {
+        height: 400px;
+      }
+      .thumbs { flex-direction: row; }
+    }
+  </style>
+</head>
+<body>
+  <header>YourStore</header>
+
+  <main>
+    <!-- LEFT GALLERY -->
+    <div class="gallery">
+      <div class="thumbs" id="thumbs">
+        <img src="led1.png" class="active" alt="">
+        <img src="led2.png" alt="">
+        <img src="led3.png" alt="">
+        <img src="led4.png" alt="">
+      </div>
+
+      <div class="main-image">
+        <button class="arrow left">‹</button>
+        <img id="mainImage" src="perfume1.png" alt="">
+        <button class="arrow right">›</button>
+      </div>
+    </div>
+
+    <!-- RIGHT DETAILS -->
+    <div class="details">
+      <h1> Custom Staircase Chandelier Lighting Clear Glass Entry Hall Light Fixtures Large Modern Chandelier for Living Room </h1>
+      <div class="seller">
+        <span>Polarux Lighting</span> · <span>6 yrs</span> · <span>🇨🇳 CN</span>
+      </div>
+
+      <div class="price-box">
+        <div class="price-row"><span>1 - 9 pieces</span><span>AED 523.48</span></div>
+        <div class="price-row"><span>10 - 19 pieces</span><span>AED 448.70</span></div>
+        <div class="price-row"><span>≥ 20 pieces</span><span>AED 336.53</span></div>
+      </div>
+
+      <div class="variation"><strong>Design Style:</strong><div class="opt">Modern</div></div>
+      <div class="variation"><strong>Lamp Power (W):</strong><div class="opt">60</div></div>
+      <div class="variation"><strong>Number of Lights:</strong><div class="opt">Other</div></div>
+
+      <div class="shipping">
+        Shipping fee and delivery date to be negotiated.<br>
+        Chat with supplier now for more details.
+      </div>
+
+      <div class="buttons">
+        <button class="inquiry">Send Inquiry</button>
+        <button class="chat">Chat Now</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const thumbs = document.querySelectorAll('#thumbs img');
+    const mainImg = document.getElementById('mainImage');
+    let index = 0;
+
+    thumbs.forEach((t, i) => {
+      t.addEventListener('click', () => {
+        thumbs.forEach(th => th.classList.remove('active'));
+        t.classList.add('active');
+        mainImg.src = t.src.replace('w=300','w=900');
+        index = i;
+      });
+    });
+
+    document.querySelector('.arrow.left').onclick = () => {
+      index = (index - 1 + thumbs.length) % thumbs.length;
+      thumbs[index].click();
+    };
+    document.querySelector('.arrow.right').onclick = () => {
+      index = (index + 1) % thumbs.length;
+      thumbs[index].click();
+    };
+  </script>
+</body>
+</html>

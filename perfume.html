@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfume Product Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #222;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+      flex-wrap: wrap;
+    }
+
+    /* ===== LEFT: Thumbnails ===== */
+    .thumbs {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 80px;
+    }
+
+    .thumbs img {
+      width: 100%;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border 0.3s;
+    }
+
+    .thumbs img:hover,
+    .thumbs img.active {
+      border-color: #0000cd;
+    }
+
+    /* ===== CENTER: Main Image ===== */
+    .main-image {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f7f7f7;
+      border-radius: 10px;
+      padding: 10px;
+      position: relative;
+    }
+
+    .main-image img {
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      border-radius: 10px;
+      transition: opacity 0.3s;
+    }
+
+    /* ===== RIGHT: Product Details ===== */
+    .details {
+      width: 340px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .details h1 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .details .price {
+      font-weight: 700;
+      color: #d32f2f;
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+
+    .details .price small {
+      color: #666;
+      font-weight: 400;
+      font-size: 0.9rem;
+    }
+
+    .variation, .volume, .supplier-info, .shipping {
+      margin: 20px 0;
+    }
+
+    .variation h4, .volume h4 {
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .variation img {
+      width: 60px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .volume select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 12px 0;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      border: none;
+      transition: 0.3s;
+    }
+
+    .btn.red {
+      background: #d32f2f;
+      color: #fff;
+    }
+
+    .btn.red:hover {
+      background: #b71c1c;
+    }
+
+    .btn.white {
+      background: #fff;
+      color: #000;
+      border: 1px solid #ccc;
+    }
+
+    .btn.white:hover {
+      background: #f4f4f4;
+    }
+
+    .supplier-info p, .shipping p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    @media (max-width: 992px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .thumbs {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+      }
+      .thumbs img {
+        height: 70px;
+        width: 70px;
+      }
+      .main-image {
+        order: -1;
+      }
+      .details {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Left: Thumbnails -->
+    <div class="thumbs">
+      <img src="perfume1.png" class="active" alt="Thumb 1">
+      <img src="perfumech2.png" alt="Thumb 2">
+      <img src="perfumech3.png" alt="Thumb 3">
+      <img src="perfumech4.png" alt="Thumb 4">
+      <img src="perfumech4.png" alt="Thumb 5">
+    </div>
+
+    <!-- Center: Main Image -->
+    <div class="main-image">
+      <img id="mainImage" src="perfume1.png" alt="Main Product Image">
+    </div>
+
+    <!-- Right: Product Details -->
+    <div class="details">
+      <h1>Perfume Private Label Parfum Spray for Unisex with Long Lasting Floral Scent</h1>
+      <p style="font-size: 0.9rem; color: #666;">No reviews yet</p>
+
+      <div class="price">
+        AED 4.04 <small>/piece (5000–9999 pcs)</small><br>
+        <span style="color:#444; font-size:0.9rem;">≥ 10,000 pieces: <strong style="color:#d32f2f;">AED 3.18</strong></span>
+      </div>
+
+      <div class="variation">
+        <h4>Smell:</h4>
+        <img src="https://picsum.photos/id/1016/200/200" alt="Spray Cologne">
+        <p style="font-size:0.9rem;">Spray Cologne</p>
+      </div>
+
+      <div class="volume">
+        <h4>Volume (ml):</h4>
+        <select>
+          <option>250ml</option>
+          <option>500ml</option>
+          <option>1000ml</option>
+        </select>
+      </div>
+
+      <div class="supplier-info">
+        <h4 style="margin-bottom:6px;">Supplier's customization ability</h4>
+        <p>• Minor customization<br>• Drawing-based customization<br>• Sample-based customization</p>
+      </div>
+
+      <div class="shipping">
+        <h4 style="margin-bottom:6px;">Shipping</h4>
+        <p>Shipping fee and delivery date to be negotiated. Chat with supplier for details.</p>
+      </div>
+
+      <div class="buttons">
+        <button class="btn red">Send inquiry</button>
+        <button class="btn white">Chat now</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const thumbs = document.querySelectorAll('.thumbs img');
+    const mainImage = document.getElementById('mainImage');
+
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        document.querySelector('.thumbs img.active').classList.remove('active');
+        thumb.classList.add('active');
+        mainImage.style.opacity = 0;
+        setTimeout(() => {
+          mainImage.src = thumb.src.replace('/200/200', '/600/600');
+          mainImage.style.opacity = 1;
+        }, 200);
+      });
+    });
+  </script>
+
+</body>
+</html>

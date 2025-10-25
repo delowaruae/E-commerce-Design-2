@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> E Commerce Shop </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+     <link rel="stylesheet" href="style.css">
+ 
+</head>
+<!-- HEADER -->
+  <header>
+    <div class="logo"> Logo </div>
+    <div class="header-right">
+      <div class="lang">EN <i class="fa-solid fa-angle-down"></i></div>
+      <i class="fa-solid fa-truck"></i>
+      <i class="fa-solid fa-bag-shopping"></i>
+      <i class="fa-solid fa-user"></i>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="all-categories" id="catBtn"><i class="fa-solid fa-bars"></i> Categories</div>
+      <div class="dropdown" id="dropdownMenu">
+        <a href="#" data-sub="electronics">Electronics <i class="fa-solid fa-angle-right"></i></a>
+        <a href="#">Fashion <i class="fa-solid fa-angle-right"></i></a>
+        <a href="#">Furniture <i class="fa-solid fa-angle-right"></i></a>
+        <a href="#">Beauty & Health <i class="fa-solid fa-angle-right"></i></a>
+        <a href="#">Home & Kitchen <i class="fa-solid fa-angle-right"></i></a>
+        <a href="#">Decoration <i class="fa-solid fa-angle-right"></i></a>
+        <a href="#">Property <i class="fa-solid fa-angle-right"></i></a>
+        <a href="#">Job <i class="fa-solid fa-angle-right"></i></a>
+      </div>
+
+      <!-- Sub Menu for Electronics -->
+      <div class="sub-menu" id="electronics">
+        <div class="sub-items">
+          <a href="#">Mobile Phones</a>
+          <a href="#">Laptops & Computers</a>
+          <a href="#">TVs & Audio</a>
+          <a href="#">Cameras</a>
+        </div>
+        <div class="sub-img">
+          <img src="header.png" alt="Electronics">
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-right">
+      <a href="#">Electronics</a>
+      <a href="#">Fashion</a>
+      <a href="#">Furniture</a>
+      <a href="#">Beauty & Health</a>
+      <a href="#">Home & Kitchen</a>
+      <a href="#">Decoration</a>
+      <a href="#">Property</a>
+      <a href="#">Job</a>
+    </div>
+  </nav>
+
+  <!-- SEARCH BAR and head carosol -->
+  <div class="hero-carousol">
+    <div class="carousel small" id="leftCarousel">
+      <div class="slides">
+        <div class="slide" style="background-image:url('lcaro1.png')"></div>
+        <div class="slide" style="background-image:url('lcaro2.png')"></div>
+        <div class="slide" style="background-image:url('lcaro3.png')"></div>
+      </div>
+      <button class="ctrl left">❮</button>
+      <button class="ctrl right">❯</button>
+      <div class="dots"></div>
+    </div>
+
+    <div class="carousel large" id="midCarousel">
+      <div class="slides">
+        <div class="slide" style="background-image:url('caro1.png')"></div>
+        <div class="slide" style="background-image:url('caro2.png')"></div>
+        <div class="slide" style="background-image:url('caro3.png')"></div>
+		<div class="slide" style="background-image:url('caro4.png')"> </div>
+      </div>
+
+      <!-- Search Bar Overlay -->
+      <div class="search-overlay">
+        <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+        <input type="text" id="searchInput" placeholder="Search for products...">
+        <i class="fa-solid fa-camera" id="cameraIcon"></i>
+        <i class="fa-solid fa-microphone" id="voiceIcon"></i>
+      </div>
+
+      <button class="ctrl left">❮</button>
+      <button class="ctrl right">❯</button>
+      <div class="dots"></div>
+    </div>
+
+    <div class="carousel small" id="rightCarousel">
+      <div class="slides">
+        <div class="slide" style="background-image:url('rcaro1.png')"></div>
+        <div class="slide" style="background-image:url('rcaro2.png')"></div>
+        <div class="slide" style="background-image:url('rcaro3.png')"></div>
+      </div>
+      <button class="ctrl left">❮</button>
+      <button class="ctrl right">❯</button>
+      <div class="dots"></div>
+    </div>
+  </div>
+
+  <!-- ===== MOBILE: Single Carousel with All Slides ===== -->
+  <div class="mobile-carousel" id="mobileCarousel">
+    <div class="slides">
+      <div class="slide" style="background-image:url('perfume1.png')"></div>
+      <div class="slide" style="background-image:url('led1.png')"></div>
+      <div class="slide" style="background-image:url('led4.png')"></div>
+    </div>
+
+    <!-- Search Bar Overlay -->
+    <div class="search-overlay">
+      <i class="fa-solid fa-magnifying-glass" id="searchIconMobile"></i>
+      <input type="text" id="searchInputMobile" placeholder="Search for products...">
+      <i class="fa-solid fa-camera" id="cameraIconMobile"></i>
+      <i class="fa-solid fa-microphone" id="voiceIconMobile"></i>
+    </div>
+
+    <button class="ctrl left">❮</button>
+    <button class="ctrl right">❯</button>
+    <div class="dots"></div>
+  </div>
+
+  <!-- Product Decoration Card Section start-->
+  <div class="product-card">
+    <h2 style="font-size:20px;font-weight:600;margin-bottom:20px; padding: 30px 30px 0 30px;">Decoration & Lighting</h2>
+    <div class="grid">
+      <!-- Decoration Card Example 1-->
+      <div class="card"> 
+        <a href="product.html">
+          <div class="card-img">
+            <img src="led1.png" alt="Chandelier">
+            <div class="city-tag">Beijing</div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Custom Staircase Chandelier</div>
+            <div class="price">AED 336.53–523.48</div>
+            <div class="min-order">Min. order: 1 piece</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>6yrs CN <a href="#">Polarux Lighting</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+
+      <!-- 2 Duplicate Sample -->
+      <div class="card"> 
+        <a href="product.html">
+          <div class="card-img">
+            <img src="led2.png" alt="Lamp">
+            <div class="city-tag"> Shenzhen </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Luxury Crystal Pendant Lamp</div>
+            <div class="price">AED 280.00–450.00</div>
+            <div class="min-order">Min. order: 2 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>4yrs CN <a href="#">BrightLite Co.</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+      
+      <!-- 3 Duplicate Sample -->
+      <div class="card"> 
+        <a href="product.html">
+          <div class="card-img">
+            <img src="led3.png" alt="LED Light">
+            <div class="city-tag"> Shenzhen </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Smart LED Strip Lights</div>
+            <div class="price">AED 120.00–180.00</div>
+            <div class="min-order">Min. order: 5 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>3yrs CN <a href="#">SmartLight Solutions</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+      
+      <!-- 4 Duplicate Sample -->
+      <div class="card"> 
+        <a href="product.html">
+          <div class="card-img">
+            <img src="led4.png" alt="Wall Lamp">
+            <div class="city-tag"> Guangzhou </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Modern Wall Sconce Lamp</div>
+            <div class="price">AED 195.00–320.00</div>
+            <div class="min-order">Min. order: 3 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>5yrs CN <a href="#">Lumina Designs</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+      
+      <!-- 5 Additional Card -->
+      <div class="card"> 
+        <a href="product.html">
+          <div class="card-img">
+            <img src="led5.png" alt="Floor Lamp">
+            <div class="city-tag"> Shanghai </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Adjustable Floor Reading Lamp</div>
+            <div class="price">AED 250.00–380.00</div>
+            <div class="min-order">Min. order: 2 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>7yrs CN <a href="#">HomeGlow Ltd.</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+      
+      <!-- 6 Additional Card -->
+      <div class="card"> 
+        <a href="product.html">
+          <div class="card-img">
+            <img src="led6.png" alt="Garden Light">
+            <div class="city-tag"> Hangzhou </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Solar Garden Pathway Lights</div>
+            <div class="price">AED 85.00–150.00</div>
+            <div class="min-order">Min. order: 10 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>2yrs CN <a href="#">EcoLight Systems</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+	  
+	        <!-- 7 Additional Card -->
+      <div class="card"> 
+        <a href="product.html">
+          <div class="card-img">
+            <img src="led7.png" alt="Floor Lamp">
+            <div class="city-tag"> Shanghai </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Adjustable Floor Reading Lamp</div>
+            <div class="price">AED 250.00–380.00</div>
+            <div class="min-order">Min. order: 2 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>7yrs CN <a href="#">HomeGlow Ltd.</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+	  
+	  
+	        <!-- 8 Additional Card -->
+      <div class="card"> 
+        <a href="product.html">
+          <div class="card-img">
+            <img src="led8.png" alt="Floor Lamp">
+            <div class="city-tag"> Shanghai </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Adjustable Floor Reading Lamp</div>
+            <div class="price">AED 250.00–380.00</div>
+            <div class="min-order">Min. order: 2 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>7yrs CN <a href="#">HomeGlow Ltd.</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+	  
+	  
+	        <!-- 9 Additional Card -->
+      <div class="card"> 
+        <a href="product.html">
+          <div class="card-img">
+            <img src="led9.png" alt="Floor Lamp">
+            <div class="city-tag"> Shanghai </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Adjustable Floor Reading Lamp</div>
+            <div class="price">AED 250.00–380.00</div>
+            <div class="min-order">Min. order: 2 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>7yrs CN <a href="#">HomeGlow Ltd.</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+	  
+	  
+	        <!-- 10 Additional Card -->
+      <div class="card"> 
+        <a href="product.html">
+          <div class="card-img">
+            <img src="led10.png" alt="Floor Lamp">
+            <div class="city-tag"> Shanghai </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Adjustable Floor Reading Lamp</div>
+            <div class="price">AED 250.00–380.00</div>
+            <div class="min-order">Min. order: 2 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>7yrs CN <a href="#">HomeGlow Ltd.</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+	  
+	  
+	        <!-- 11 Additional Card -->
+      <div class="card"> 
+        <a href="product.html">
+          <div class="card-img">
+            <img src="led11.png" alt="Floor Lamp">
+            <div class="city-tag"> Shanghai </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Adjustable Floor Reading Lamp</div>
+            <div class="price">AED 250.00–380.00</div>
+            <div class="min-order">Min. order: 2 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>7yrs CN <a href="#">HomeGlow Ltd.</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+	  
+	  
+	        <!-- 12 Additional Card -->
+      <div class="card"> 
+        <a href="product.html">
+          <div class="card-img">
+            <img src="led12.png" alt="Floor Lamp">
+            <div class="city-tag"> Shanghai </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Adjustable Floor Reading Lamp</div>
+            <div class="price">AED 250.00–380.00</div>
+            <div class="min-order">Min. order: 2 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>7yrs CN <a href="#">HomeGlow Ltd.</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+	  
+    </div>
+  </div>
+  <!-- Product Card Section ends--> 
+  
+  
+  
+   <!-- Perfume Product Card Section start-->
+  <div class="product-card">
+    <h2 style="font-size:20px;font-weight:600;margin-bottom:20px; padding: 30px 30px 0 30px;"> Beauty and Fashion </h2>
+    <div class="grid">
+      <!-- Perfume Product Card Example 1-->
+      <div class="card"> 
+        <a href="perfume.html">
+          <div class="card-img">
+            <img src="perfume1.png" alt="Chandelier">
+            <div class="city-tag"> France </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title"> Smart Perfume </div>
+            <div class="price">AED 136</div>
+            <div class="min-order"> Min. order: 100 piece</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span> 6yrs  <a href="perfume.html"> Rasasi Perfume Co </a> </span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+
+      <!-- Perfume Product Card Example 2--->
+      <div class="card"> 
+        <a href="perfume.html">
+          <div class="card-img">
+            <img src="perfume2.png" alt="Lamp">
+            <div class="city-tag"> Paris </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title"> Sensative Perfume </div>
+            <div class="price">AED 280.00</div>
+            <div class="min-order">Min. order: 200 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>5yrs  <a href="#"> Oudh Perfume Co.</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Perfume Product Card Example 3- -->
+      <div class="card"> 
+        <a href="perfume.html">
+          <div class="card-img">
+            <img src="perfume3.png" alt="LED Light">
+            <div class="city-tag"> Iranian </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Night Love </div>
+            <div class="price">AED 120.00</div>
+            <div class="min-order">Min. order: 50 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>3yrs CN <a href="#"> Rosebaly Co</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Perfume Product Card Example 4  -->
+      <div class="card"> 
+      <a href="perfume.html">
+          <div class="card-img">
+            <img src="perfume4.png" alt="Wall Lamp">
+            <div class="city-tag"> Guangzhou </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Signature Perfume </div>
+            <div class="price">AED 195.00</div>
+            <div class="min-order">Min. order: 3 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>5yrs CN <a href="#"> Assent Perfume Co</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Perfume Product Card Example 5  -->
+      <div class="card"> 
+        <a href="perfume.html">
+          <div class="card-img">
+            <img src="perfume5.png" alt="Floor Lamp">
+            <div class="city-tag"> Shanghai </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Adjustable Floor Reading Lamp</div>
+            <div class="price">AED 250.00–380.00</div>
+            <div class="min-order">Min. order: 2 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>7yrs · CN <a href="#">HomeGlow Ltd.</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Perfume Product Card Example  6 -->
+      <div class="card"> 
+     <a href="perfume.html">
+          <div class="card-img">
+            <img src="perfume6.png" alt="Garden Light">
+            <div class="city-tag"> UAE </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Body Smell</div>
+            <div class="price">AED 85.00</div>
+            <div class="min-order">Min. order: 10 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>2yrs · CN <a href="#">Dark Perfume Co</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+	  
+	  <!-- Perfume Product Card Example  7 -->
+      <div class="card"> 
+     <a href="perfume.html">
+          <div class="card-img">
+            <img src="perfume7.png" alt="Garden Light">
+            <div class="city-tag"> UAE No1 </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Blue Lady Smell</div>
+            <div class="price">AED 85.00</div>
+            <div class="min-order">Min. order: 10 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>2yrs · CN <a href="#">Dark Perfume Co</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+	  
+	  
+	  <!-- Perfume Product Card Example  8 -->
+      <div class="card"> 
+     <a href="perfume.html">
+          <div class="card-img">
+            <img src="perfume8.png" alt="Garden Light">
+            <div class="city-tag"> UAE </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Body Smell</div>
+            <div class="price">AED 85.00</div>
+            <div class="min-order">Min. order: 10 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>2yrs · CN <a href="#">Dark Perfume Co</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+	  
+	  
+	  <!-- Perfume Product Card Example  9 -->
+      <div class="card"> 
+     <a href="perfume.html">
+          <div class="card-img">
+            <img src="perfume9.png" alt="Garden Light">
+            <div class="city-tag"> Saudi</div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Night Queen </div>
+            <div class="price">AED 85.00</div>
+            <div class="min-order">Min. order: 10 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>2yrs · CN <a href="#">Dark Perfume Co</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+	  
+	  <!-- Perfume Product Card Example  10 -->
+      <div class="card"> 
+     <a href="perfume.html">
+          <div class="card-img">
+            <img src="perfume10.png" alt="Garden Light">
+            <div class="city-tag"> UAE </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Blue Lady</div>
+            <div class="price">AED 85.00</div>
+            <div class="min-order">Min. order: 10 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>2yrs · CN <a href="#">Dark Perfume Co</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+	  
+	  <!-- Perfume Product Card Example  11 -->
+      <div class="card"> 
+     <a href="perfume.html">
+          <div class="card-img">
+            <img src="perfume11.png" alt="Garden Light">
+            <div class="city-tag"> Egypt </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Body Smell</div>
+            <div class="price">AED 85.00</div>
+            <div class="min-order">Min. order: 10 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>2yrs · CN <a href="#">Rasasi Perfume Co</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+	  
+	  <!-- Perfume Product Card Example  12 -->
+      <div class="card"> 
+     <a href="perfume.html">
+          <div class="card-img">
+            <img src="perfume12.png" alt="Garden Light">
+            <div class="city-tag"> Turkey </div>
+          </div>
+          <div class="card-body">
+            <div class="product-title">Body Smell</div>
+            <div class="price">AED 85.00</div>
+            <div class="min-order">Min. order: 10 pieces</div>
+            <div class="supplier">
+              <img src="https://flagcdn.com/w20/cn.png" alt="CN">
+              <span>2yrs · CN <a href="#">Dark Perfume Co</a></span>
+            </div>
+            <button class="btn-contact">Contact Supplier</button>
+          </div>
+        </a>
+      </div>
+	  
+    </div>
+  </div>
+  <!-- Perfume Product Card Section ends-->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<!-- brands start-->
+  <div class="brand-container"> 
+  <h2>Top Brands</h2>
+
+  <div class="slider-container">
+    <div class="arrow left">&#10094;</div>
+
+    <div class="brand-track" id="brandTrack">
+      <div class="brand-card"><img src="brands1.png" alt="Apple"></div>
+      <div class="brand-card"><img src="brands2.png" alt="Samsung"></div>
+      <div class="brand-card"><img src="brands3.png" alt="Sony"></div>
+      <div class="brand-card"><img src="brands4.png" alt="HP"></div>
+      <div class="brand-card"><img src="brands5.png" alt="Lenovo"></div>
+      <div class="brand-card"><img src="brands6.png" alt="Xiaomi"></div>
+      <div class="brand-card"><img src="brands7.png" alt="Honor"></div>
+      <div class="brand-card"><img src="brands8.png" alt="Hisense"></div>
+      <div class="brand-card"><img src="brands9.png" alt="Huawei"></div>
+      <div class="brand-card"><img src="brands10.png" alt="LG"></div>
+      <div class="brand-card"><img src="brands11.png" alt="Microsoft"></div>
+      <div class="brand-card"><img src="brands12.png" alt="ASUS"></div>
+    </div>
+
+    <div class="arrow right">&#10095;</div>
+  </div>
+   </div>
+
+  <div class="dots" id="dots"></div>
+  <!-- brands ends-->
+  
+  
+  
+  
+  
+  <!-- ceo section start -->
+  
+  <div class="ceo-container">
+    <div class="ceo-inner">
+      <!-- Text content - ALWAYS ON LEFT -->
+      <div class="ceo-content">
+        <h2>Message From CEO</h2>
+        
+        <p><strong>B2BDUBAI24.COM</strong> was created in 2024 at the aim of to serve Gulf Country by IT venture company in domestic E-Commerce. It has since evolved along with the internet. Furthermore, we have set our eyes on the growing Middle-East market over the past decade.</p>
+      </div>
+
+      <!-- Image section - ALWAYS ON RIGHT -->
+      <div class="ceo-image">
+        <img src="ceo.png" alt="CEO portrait">
+      </div>
+    </div>
+  </div>  
+    <!-- ceo section ends -->  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <!-- Footer Section starts-->
+  <div class="sub-footer">
+    <div class="sub-footer-container">
+      <div class="sub-footer-about">
+        <h3>ABOUT B2BDUBAI24.COM</h3>
+        <p>We are a real estate agency that will help you find the best residence you dream of.</p>
+      </div>
+      <div class="sub-footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="sub-footer-contact">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-map-marker-alt"> </i> 123 Street, New York, USA</p>
+        <p><i class="fas fa-phone"> </i> +012 345 67890</p>
+        <p><i class="fas fa-envelope"> </i> info@homez24.com</p>
+      </div>
+      <div class="sub-footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+      <a href="#">Sitemap</a>
+      <a href="#">Manage cookies</a>
+      <a href="#">Do not share my personal info</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-tiktok"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-twitch"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+
+      <!-- Notification icon with badge -->
+      <a href="#">
+        <ion-icon name="notifications-outline"></ion-icon>
+        <span class="badge">3</span>
+      </a>
+    </div>
+
+    <div class="footer-bottom">
+      <p> &copy; 2025 b2bdubai24.com ||  All Rights Reserved© </p>
+    </div>
+  </footer>
+  <!-- Footer Section ends-->
+  
+  <!-- Ionicons Script -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
+  <script>
+    const catBtn = document.getElementById("catBtn");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+    const subMenu = document.getElementById("electronics");
+
+    let hideTimer;
+
+    // Toggle dropdown
+    catBtn.addEventListener("click", () => {
+      dropdownMenu.style.display =
+        dropdownMenu.style.display === "flex" ? "none" : "flex";
+      clearTimeout(hideTimer);
+      startHideTimer();
+    });
+
+    dropdownMenu.addEventListener("mouseenter", () => clearTimeout(hideTimer));
+    dropdownMenu.addEventListener("mouseleave", startHideTimer);
+
+    // Submenu show on hover
+    dropdownMenu.querySelector("[data-sub='electronics']").addEventListener("mouseenter", () => {
+      subMenu.style.display = "flex";
+      clearTimeout(hideTimer);
+    });
+
+    subMenu.addEventListener("mouseenter", () => clearTimeout(hideTimer));
+    subMenu.addEventListener("mouseleave", startHideTimer);
+
+    function startHideTimer() {
+      hideTimer = setTimeout(() => {
+        dropdownMenu.style.display = "none";
+        subMenu.style.display = "none";
+      }, 3000);
+    }
+  </script>
+  
+  <script>
+    function initCarousel(id, interval=4000){
+      const el = document.getElementById(id);
+      const slides = el.querySelector('.slides');
+      const total = slides.children.length;
+      const dotsBox = el.querySelector('.dots');
+      let index = 0;
+
+      // Create dots
+      for(let i=0;i<total;i++){
+        const dot=document.createElement('div');
+        dot.className='dot'+(i===0?' active':'');
+        dot.addEventListener('click',()=>goTo(i));
+        dotsBox.appendChild(dot);
+      }
+      const dots=[...dotsBox.children];
+
+      function goTo(i){
+        index=(i+total)%total;
+        slides.style.transform=`translateX(-${index*100}%)`;
+        dots.forEach((d,j)=>d.classList.toggle('active',j===index));
+      }
+      el.querySelector('.ctrl.left').onclick=()=>goTo(index-1);
+      el.querySelector('.ctrl.right').onclick=()=>goTo(index+1);
+
+      // autoplay
+      let timer=setInterval(()=>goTo(index+1),interval);
+      el.addEventListener('mouseenter',()=>clearInterval(timer));
+      el.addEventListener('mouseleave',()=>timer=setInterval(()=>goTo(index+1),interval));
+    }
+
+    // Initialize all carousels
+    initCarousel('leftCarousel');
+    initCarousel('midCarousel');
+    initCarousel('rightCarousel');
+    initCarousel('mobileCarousel',5000);
+
+    // ===== ICON ACTIONS =====
+    function attachIconEvents(prefix){
+      document.getElementById(`${prefix}searchIcon`).addEventListener("click", ()=>{
+        const val = document.getElementById(`${prefix}searchInput`).value.trim();
+        if(val) alert("Searching for: " + val);
+        else alert("Please enter a search term.");
+      });
+      document.getElementById(`${prefix}cameraIcon`).addEventListener("click", ()=>{
+        alert("Camera search activated 📷");
+      });
+      document.getElementById(`${prefix}voiceIcon`).addEventListener("click", ()=>{
+        alert("Voice search activated 🎤");
+      });
+    }
+
+    attachIconEvents('');
+    attachIconEvents('Mobile');
+  </script>
+  
+  
+  
+  
+  
+  <!-- brands start -->
+  <script>
+    const track = document.getElementById('brandTrack');
+    const dotsContainer = document.getElementById('dots');
+    const leftArrow = document.querySelector('.arrow.left');
+    const rightArrow = document.querySelector('.arrow.right');
+    const cards = document.querySelectorAll('.brand-card');
+
+    let currentSlide = 0;
+    let cardsPerView = window.innerWidth <= 768 ? 3 : 6;
+    const totalSlides = Math.ceil(cards.length / cardsPerView);
+
+    function updateDots() {
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === currentSlide) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      const offset = -index * 100;
+      track.style.transform = `translateX(${offset}%)`;
+      updateDots();
+    }
+
+    rightArrow.addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      goToSlide(currentSlide);
+    });
+
+    leftArrow.addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      goToSlide(currentSlide);
+    });
+
+    window.addEventListener('resize', () => {
+      cardsPerView = window.innerWidth <= 768 ? 3 : 6;
+      goToSlide(0);
+      updateDots();
+    });
+
+    updateDots();
+    goToSlide(0);
+  </script>
+  <!-- brands end -->
+  
+  
+  
+  
+</body>
+</html>
